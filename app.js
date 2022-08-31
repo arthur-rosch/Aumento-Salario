@@ -1,15 +1,17 @@
 var nome,
-  escolha,
+  escolha = 1,
   salario = 0,
   salarioNovo = 0,
   aumento = 0;
-
-Dados();
-SalarioComparador(salario);
-salarioNovo = Aumento(salario, aumento);
-console.log(`${nome}\n R$ ${salario} \n${aumento}% \n${salarioNovo} `);
-continuar();
-
+while (escolha == 1) {
+  Dados();
+  SalarioComparador(salario);
+  salarioNovo = Aumento(salario, aumento);
+  console.log(
+    `${nome}\nSalario: R$${salario} \nAumento: ${aumento}% \nSalario com Aumento:${salarioNovo} `
+  );
+  continuar();
+}
 function Dados() {
   nome = prompt("Qual o seu nome: ");
   salario = parseFloat(prompt("Qual o seu Salario"));
